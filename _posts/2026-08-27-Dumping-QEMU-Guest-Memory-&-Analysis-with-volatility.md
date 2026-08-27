@@ -42,9 +42,9 @@ We can also find this with the below:
 ```bash
 sudo awk '{split($1,a,"-"); size=strtonum("0x"a[2])-strtonum("0x"a[1]); print size, $0}' /proc/<QEMU PID>/maps | sort -nr | numfmt --field=1 --to=iec
 16G 7f14abe00000-7f18abe00000 rw-p 00000000 00:00 0 
-256M 7f1430000000-7f1440000000 rw-s 10000000000 00:11 3101&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anon_inode:[vfio-device]
-64M 7f14a7dff000-7f14abdff000 rw-s 00000000 00:07 239&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/dev/kvmfr0
-64M 7f144c000000-7f1450000000 rw-s 00000000 00:11 3101&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anon_inode:[vfio-device]
+256M 7f1430000000-7f1440000000 rw-s 10000000000 00:11 3101 anon_inode:[vfio-device]
+64M 7f14a7dff000-7f14abdff000 rw-s 00000000 00:07 239 /dev/kvmfr0
+64M 7f144c000000-7f1450000000 rw-s 00000000 00:11 3101 anon_inode:[vfio-device]
 64M 7f18b4021000-7f18b8000000 ---p 00000000 00:00 0 
 64M 7f18ac021000-7f18b0000000 ---p 00000000 00:00 0 
 64M 7f14a0021000-7f14a4000000 ---p 00000000 00:00 0 
