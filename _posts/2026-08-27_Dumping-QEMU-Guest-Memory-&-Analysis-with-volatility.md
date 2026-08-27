@@ -11,7 +11,7 @@ To begin this project i will write a program that dumps the "physical" memory of
 Effectively the steps to achieve this are as follows:
 
 1. Find the QEMU PID
-2. Read `/proc/&lt;QEMU PID&gt;/maps`
+2. Read `/proc/<QEMU PID>/maps`
 3. Find the memory mapping which corresponds to pc.ram
 4. Read both the low & high memory regions to a file
 5. Validate the dump using Volatility3
