@@ -30,10 +30,10 @@ By default QEMU creates a memory map for guest RAM and backs it with memory allo
   
 On Linux you can view the memory mappings of any process in plain text as follows: `cat /proc/<pid>/maps`. An example entry within this file is as follows:  
   
-`7f1fb00aa000-7f1fb00bf000 r--p 00034000 00:24 1437171&nbsp;/usr/lib64/libduktape.so.207.20700`  
+`7f1fb00aa000-7f1fb00bf000 r--p 00034000 00:24 1437171 /usr/lib64/libduktape.so.207.20700`  
   
 For now we only care about the first part - the given virtual address range. To find the largest memory map we will need to check each line and do the following:  
-`&lt;end virtual address&gt; - &lt;start virtual address&gt; = &lt;map size&gt;.`  
+`<end virtual address> - <start virtual address> = <map size>`  
   
 We will then need to compare the result of each line until we're left with the largest map size.  
   
