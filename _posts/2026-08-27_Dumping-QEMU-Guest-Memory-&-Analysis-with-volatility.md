@@ -64,7 +64,7 @@ We can use the [RAMMap sysinternals tool](<https://learn.microsoft.com/en-us/sys
 
 
 
-![image.png](<./attachments/17232f8d9ee5057c-image.png>)
+![image.png](<./assets/17232f8d9ee5057c-image.png>)
 
 As default behavior on systems with greater than 2816MiB of memory assigned, physical ranges are split into both a low & high memory region. This is due to memory addresses between 2GiB-4GiB being reserved for MMIO (memory mapped input/output).
 
