@@ -1,3 +1,8 @@
+---
+title: Dumping QEMU Guest Memory & Analysis with volatility
+date: 2026-08-27
+---
+
 # Dumping QEMU Guest Memory & Analysis with volatility
 
 At around the end of 2025 i had created a proof of concept memory introspection library written in C.  
