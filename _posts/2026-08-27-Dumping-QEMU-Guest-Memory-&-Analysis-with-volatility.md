@@ -28,7 +28,7 @@ This step will help later on when putting the library together by ensuring any m
 
 By default QEMU creates a memory map for guest RAM and backs it with memory allocated in the host address space.  
   
-On Linux you can view the memory mappings of any process in plain text as follows: `cat /proc/&lt;pid&gt;/maps`. An example entry within this file is as follows:  
+On Linux you can view the memory mappings of any process in plain text as follows: `cat /proc/<pid>/maps`. An example entry within this file is as follows:  
   
 `7f1fb00aa000-7f1fb00bf000 r--p 00034000 00:24 1437171&nbsp;/usr/lib64/libduktape.so.207.20700`  
   
@@ -80,7 +80,7 @@ To target high region we will read from `0x100000000` to `0x480000000`.
 
 An important note - the hexadecimal value of `0x480000000` equates to 18GiB. As such when we create our dump we will have to include our MMIO region but given this does not contain any pages used by the OS it is safe to just zero this region.
 
-This also means that our QEMU guest RAM mapping is not the same as what's visible in the context of the virtual machine. Using libvirt we can use `virsh qemu-monitor-command &lt;Guest Name&gt; --hmp "info mtree -f"` in the terminal to check how this has been addressed. Towards the top of the output we can see the below:
+This also means that our QEMU guest RAM mapping is not the same as what's visible in the context of the virtual machine. Using libvirt we can use `virsh qemu-monitor-command <Guest Name> --hmp "info mtree -f"` in the terminal to check how this has been addressed. Towards the top of the output we can see the below:
 
 ```bash
 Root memory region: system
