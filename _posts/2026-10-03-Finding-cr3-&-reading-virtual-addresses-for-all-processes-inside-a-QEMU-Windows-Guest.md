@@ -1,6 +1,6 @@
 ---
 title: Finding cr3 & reading virtual addresses for all processes inside a QEMU Windows Guest
-date: 2026-10-03 20:00:00 +0100
+date: 2026-10-03 19:30:00 +0100
 tags: [qemu, memory, volatility, C, memory introspection]
 ---
 
