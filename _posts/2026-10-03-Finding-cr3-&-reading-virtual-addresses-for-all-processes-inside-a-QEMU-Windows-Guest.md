@@ -6,7 +6,7 @@ tags: [qemu, memory, volatility, C, memory introspection]
 
 # Finding cr3 & reading virtual addresses for all processes inside a QEMU Windows Guest
 
-*Note: you can view the source code *[*here*](<https://github.com/jbail4/qvmi> "here.")* to get a context for all structures referenced. *
+*Note: you can view the source code *[*here*](<https://github.com/jbail4/qvmi> "here.")* to get a context for all structures referenced.
 
 Following on from the last blog post - we were able to create a dump of our windows virtual machine running under QEMU. This successfully targeted the correct memory mapping and dumped both low & high memory ranges to a file and verified this was correct from a successful analysis with volatity.
 
