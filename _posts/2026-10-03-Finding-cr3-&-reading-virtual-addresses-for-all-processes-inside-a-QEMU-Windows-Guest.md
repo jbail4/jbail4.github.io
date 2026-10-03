@@ -188,7 +188,7 @@ qvmi_proc_instance_list *qvmi_get_proc_instance_list(struct qvmi_os_instance *os
 
 The above within the library provides a linked list where you can view the process path (on disk), process ID, entry address and our dtb (aka cr3). With this we can now use our aforementioned `qvmi_read_virt` function to read any virtual address of any process on our system.
 
-In the next blog post we will look into how we find PsLoadedModuleList, PsActiveProcessHead without having to use any tools on our QEMU windows guest virtual machine.
+In the next blog post we will look into how we find PsLoadedModuleList and PsActiveProcessHead without having to use any tools on our QEMU windows guest virtual machine.
 
 
 
