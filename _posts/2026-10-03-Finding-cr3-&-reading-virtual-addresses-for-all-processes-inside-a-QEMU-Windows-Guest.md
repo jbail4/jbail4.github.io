@@ -77,13 +77,13 @@ To begin, we will use WinDbg for now to provide these values to us. After attach
 
 
 
-![image.png](<./attachments/cd83afb2a575a622-image.png>)
+![image.png](<./assets/cd83afb2a575a622-image.png>)
 
 To find our kernel cr3, we can use `!process -1 0` after changing the context to our kernel. This will output the DTB (aka cr3) like below.
 
 
 
-![image.png](<./attachments/bbf6a83d15296401-image.png>)
+![image.png](<./assets/bbf6a83d15296401-image.png>)
 
 Now we have all the values we need to use our virtual to physical address translator in the context of our kernel address space. This looks like the below.
 
